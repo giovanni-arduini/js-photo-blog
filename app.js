@@ -9,7 +9,7 @@ function photosFromAlbum() {
 
       album.forEach((photoElement) => {
         const { title, url } = photoElement;
-        rowElement.innerHTML += `<div class="col mt-5">
+        rowElement.innerHTML += `<div class="col my-5">
             <div class="card mx-auto rounded-0" style="width: 18rem">
               <div class="pin">
                 <img src="./img/pin.svg" alt="" />
