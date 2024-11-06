@@ -1,0 +1,13 @@
+.header {
+  background-image: url(./img/wall.png);
+  background-size: cover;
+
+  text-align: center;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.main {
+  background-image: url(./img/cork.png);
+}
