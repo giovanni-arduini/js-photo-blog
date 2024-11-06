@@ -11,3 +11,9 @@
 .main {
   background-image: url(./img/cork.png);
 }
+
+.card-img-top {
+  padding: 1rem;
+  width: 600px;
+  aspect-ratio: 1/1;
+}
