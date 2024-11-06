@@ -12,6 +12,19 @@
   background-image: url(./img/cork.png);
 }
 
+.pin {
+  border-radius: 999px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+}
+
 .card-img-top {
   padding: 1rem;
   width: 600px;
