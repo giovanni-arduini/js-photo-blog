@@ -1,3 +1,4 @@
+const body = document.querySelector("body");
 const rowElement = document.getElementById("row");
 const albumCards = [];
 const overlayElement = document.querySelector(".overlay");
@@ -35,6 +36,7 @@ function photosFromAlbum() {
         newCard.addEventListener("click", () => {
           overlayElement.classList.remove("d-none");
           overlayImg.src = url;
+          body.classList.toggle("no-scroll");
         });
       });
     })
@@ -81,6 +83,7 @@ photosFromAlbum();
 
 overlayButton.addEventListener("click", () => {
   overlayElement.classList.add("d-none");
+  body.classList.toggle("no-scroll");
 });
 
 // cards.addEventListener("click", () => {
