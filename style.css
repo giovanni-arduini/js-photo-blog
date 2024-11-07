@@ -54,9 +54,9 @@
 
 .card:hover {
   transform: rotate(-10deg) scale(110%);
-  transition: 200ms;
+  transition: 300ms;
   z-index: 2;
-  box-shadow: 10px 10px rgba(24, 24, 24, 0.4);
+  box-shadow: 10px 10px rgba(24, 24, 24, 0.3);
 }
 
 .card:hover .pin {
