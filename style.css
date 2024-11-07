@@ -19,7 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,6 +54,16 @@
 
 .card:hover {
   transform: rotate(-10deg) scale(110%);
+  transition: 200ms;
+  z-index: 2;
+  box-shadow: 10px 10px rgba(24, 24, 24, 0.4);
+}
+
+.card:hover .pin {
+  display: none;
+}
+
+.card:not(:hover) {
   transition: 200ms;
 }
 
