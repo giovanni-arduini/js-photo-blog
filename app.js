@@ -1,27 +1,7 @@
 const rowElement = document.getElementById("row");
 const albumCards = [];
-
 const overlayElement = document.querySelector(".overlay");
 const overlayButton = document.querySelector(".overlay button");
-
-// const row = document.getElementById("row");
-// const newCol = document.createElement("div");
-// const newCard = document.createElement("div");
-// newCard.classList.add("card", "mx-auto", "rounded-0");
-// const cardImg = document.createElement("img");
-// cardImg.classList.add("card-img-top");
-// cardImg.src = "https://picsum.photos/200/300";
-// const cardBody = document.createElement("div");
-// cardBody.classList.add("card-body");
-// const cardText = document.createElement("p");
-// cardText.classList.add("card-text");
-// cardText.innerHTML = `OVOLOLLO`;
-
-// rowElement.appendChild(newCol);
-// newCol.appendChild(newCard);
-// newCard.appendChild(cardImg);
-// cardBody.appendChild(cardText);
-// newCard.appendChild(cardBody);
 
 function photosFromAlbum() {
   axios
@@ -34,15 +14,15 @@ function photosFromAlbum() {
         const { title, url } = photoElement;
         const newCol = document.createElement("div");
         const newCard = document.createElement("div");
-        newCard.classList.add("card", "mx-auto", "rounded-0");
+        newCard.classList.add("card", "mx-auto", "rounded-0", "mt-4");
         const cardImg = document.createElement("img");
         cardImg.classList.add("card-img-top");
-        cardImg.src = "https://picsum.photos/200/300";
+        cardImg.src = `${url}`;
         const cardBody = document.createElement("div");
         cardBody.classList.add("card-body");
         const cardText = document.createElement("p");
         cardText.classList.add("card-text");
-        cardText.innerHTML = `OVOLOLLO`;
+        cardText.innerHTML = `${title}`;
 
         rowElement.appendChild(newCol);
         newCol.appendChild(newCard);
@@ -56,6 +36,7 @@ function photosFromAlbum() {
     });
 }
 
+// VECCHIA FUNCTION CON TEMPLATE LITERAL
 // function photosFromAlbum() {
 //   axios
 //     .get("https://jsonplaceholder.typicode.com/photos?_limit=6")
@@ -91,6 +72,13 @@ function photosFromAlbum() {
 
 photosFromAlbum();
 
+const cards = document.querySelector(".card");
+console.log(cards);
+
 overlayButton.addEventListener("click", () => {
   overlayElement.classList.add("d-none");
 });
+
+// cards.addEventListener("click", () => {
+//   overlayElement.classList.remove("d-none");
+// });
