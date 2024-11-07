@@ -53,10 +53,10 @@
 }
 
 .card:hover {
-  transform: rotate(-10deg) scale(110%);
+  transform: rotate(10deg) scale(110%);
   transition: 300ms;
   z-index: 2;
-  box-shadow: 10px 10px rgba(24, 24, 24, 0.3);
+  box-shadow: 0 10px 15px rgba(43, 43, 43, 0.5);
 }
 
 .card:hover .pin {
