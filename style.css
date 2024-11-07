@@ -45,6 +45,7 @@
 
 .card {
   position: relative;
+  width: 18rem;
 }
 
 .card-img-top {
