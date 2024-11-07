@@ -16,6 +16,9 @@ function photosFromAlbum() {
         const newCol = document.createElement("div");
         const newCard = document.createElement("div");
         newCard.classList.add("card", "mx-auto", "rounded-0", "mt-4");
+        newCard.innerHTML = `  <div class="pin">
+            <img src="./img/pin.svg" 
+          </div>`;
         const cardImg = document.createElement("img");
         cardImg.classList.add("card-img-top");
         cardImg.src = `${url}`;
