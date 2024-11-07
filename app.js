@@ -1,6 +1,9 @@
 const rowElement = document.getElementById("row");
 const albumCards = [];
 
+const overlayElement = document.querySelector(".overlay");
+const overlayButton = document.querySelector(".overlay button");
+
 function photosFromAlbum() {
   axios
     .get("https://jsonplaceholder.typicode.com/photos?_limit=6")
@@ -35,3 +38,7 @@ function photosFromAlbum() {
 }
 
 photosFromAlbum();
+
+overlayButton.addEventListener("click", () => {
+  overlayElement.classList.add("d-none");
+});
