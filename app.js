@@ -1,4 +1,5 @@
 const rowElement = document.getElementById("row");
+const albumCards = [];
 
 function photosFromAlbum() {
   axios
