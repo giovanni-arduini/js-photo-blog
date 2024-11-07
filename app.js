@@ -29,6 +29,10 @@ function photosFromAlbum() {
         newCard.appendChild(cardImg);
         cardBody.appendChild(cardText);
         newCard.appendChild(cardBody);
+
+        newCard.addEventListener("click", () => {
+          overlayElement.classList.remove("d-none");
+        });
       });
     })
     .catch((err) => {
@@ -71,9 +75,6 @@ function photosFromAlbum() {
 // }
 
 photosFromAlbum();
-
-const cards = document.querySelector(".card");
-console.log(cards);
 
 overlayButton.addEventListener("click", () => {
   overlayElement.classList.add("d-none");
