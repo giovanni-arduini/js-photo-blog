@@ -30,8 +30,11 @@ function photosFromAlbum() {
         cardBody.appendChild(cardText);
         newCard.appendChild(cardBody);
 
+        const overlayImg = document.querySelector(".overlay img");
+
         newCard.addEventListener("click", () => {
           overlayElement.classList.remove("d-none");
+          overlayImg.src = url;
         });
       });
     })
