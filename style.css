@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: Impact, "Arial Narrow Bold", sans-serif;
+  font-family: "Edu AU VIC WA NT Pre", serif;
 }
 
 .container {
@@ -42,6 +42,7 @@ html {
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
+  text-transform: capitalize;
 }
 
 .card:hover {
@@ -135,3 +136,5 @@ html {
 .overlay.d-none {
   display: none;
 }
+
+/* RESPONSIVENESS */
