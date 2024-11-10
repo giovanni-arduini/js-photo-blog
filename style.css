@@ -1,15 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Impact, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .header {
   background-image: url(./img/wall.png);
   background-size: cover;
-
+  padding: 20px;
   text-align: center;
   font-size: 70px;
   font-style: italic;
   font-weight: 500;
 }
 
-.no-scroll {
-  overflow: hidden;
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  justify-content: center;
+}
+
+.col-4 {
+  width: 30%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card p {
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .overlay {
@@ -26,7 +68,14 @@
 }
 
 .overlay button {
-  margin-top: 1rem;
+  margin: 1rem 2rem;
+  align-self: flex-end;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.overlay button:hover {
+  cursor: pointer;
 }
 
 .overlay img {
@@ -50,7 +99,7 @@
 
 .card {
   position: relative;
-  width: 18rem;
+  background-color: white;
 }
 
 .card:hover {
@@ -71,6 +120,15 @@
 .card-img-top {
   padding: 1rem;
   width: 600px;
-  aspect-ratio: 1/1;
   padding-bottom: 0px;
+}
+
+/* UTILITIES */
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.overlay.d-none {
+  display: none;
 }

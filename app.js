@@ -3,7 +3,7 @@ const body = document.querySelector("body");
 const rowElement = document.getElementById("row");
 const albumCards = [];
 const overlayElement = document.querySelector(".overlay");
-const overlayButton = document.querySelector(".overlay button");
+const overlayButton = document.querySelector(".overlay .button");
 const overlayImg = document.querySelector(".overlay img");
 
 // EVENT LISTENERS
@@ -21,7 +21,7 @@ overlayElement.addEventListener("click", (event) => {
 // FUNCTIONS
 function closeOverlay() {
   overlayElement.classList.add("d-none");
-  body.classList.toggle("no-scroll");
+  body.classList.remove("no-scroll");
 }
 
 function photosFromAlbum() {
@@ -34,9 +34,10 @@ function photosFromAlbum() {
       album.forEach((photoElement) => {
         const { title, url } = photoElement;
         const newCol = document.createElement("div");
+        newCol.classList.add("col-4");
         const newCard = document.createElement("div");
-        newCard.innerHTML += `<div class="col my-5">
-             <div class="card mx-auto rounded-0" style="width: 18rem">
+        newCard.classList.add("card");
+        newCard.innerHTML += `
                <div class="pin">
                  <img src="./img/pin.svg" alt="" />
                </div>
@@ -50,16 +51,16 @@ function photosFromAlbum() {
                    ${title}
                  </p>
                </div>
-             </div>
-           </div>`;
+            `;
 
         rowElement.appendChild(newCol);
         newCol.appendChild(newCard);
 
         const overlayImg = document.querySelector(".overlay img");
 
-        newCard.addEventListener("click", () => {
-          overlayElement.classList.remove("d-none");
+        newCard.addEventListener("click", (event) => {
+          console.log(event);
+          overlayElement.classList.toggle("d-none");
           overlayImg.src = url;
           body.classList.toggle("no-scroll");
         });
