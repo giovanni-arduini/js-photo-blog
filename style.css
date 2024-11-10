@@ -29,10 +29,13 @@ html {
   gap: 1rem;
   padding-top: 2rem;
   justify-content: center;
+  align-content: stretch;
 }
 
 .col-4 {
   width: 30%;
+  display: flex;
+  align-items: stretch;
 }
 
 .card {
