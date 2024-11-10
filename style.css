@@ -26,8 +26,8 @@ html {
 .row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   padding-top: 2rem;
+  margin: 0 2rem;
   justify-content: center;
   align-content: stretch;
 }
@@ -35,13 +35,15 @@ html {
 .col-4 {
   width: 30%;
   display: flex;
+  justify-content: center;
   align-items: stretch;
+  padding: 1rem 1rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
+
   text-transform: capitalize;
 }
 
@@ -138,3 +140,15 @@ html {
 }
 
 /* RESPONSIVENESS */
+
+@media (max-width: 1024px) {
+  .col-4 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col-4 {
+    width: 100%;
+  }
+}
