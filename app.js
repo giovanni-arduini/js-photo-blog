@@ -33,6 +33,15 @@ function photosFromAlbum() {
 
       album.forEach((photoElement) => {
         const { title, url } = photoElement;
+
+        // const titleWords = title.split(" ");
+        // console.log(title);
+        // for (let i = 0; i < titleWords.length; i++) {
+        //   const titleWord =
+        //     titleWords[i][0].toUpperCase() + titleWords[i].substr(1);
+        //   titleWords += titleWord;
+        // }
+
         const newCol = document.createElement("div");
         newCol.classList.add("col-4");
         const newCard = document.createElement("div");
@@ -69,6 +78,10 @@ function photosFromAlbum() {
     .catch((err) => {
       console.log("Qualcosa è andato storto!");
     });
+}
+
+function firstLetterToUpperCase(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
 
 photosFromAlbum();
